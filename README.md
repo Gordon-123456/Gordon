@@ -33,8 +33,8 @@ It includes how to create the VM, install Ubuntu, and install some basic tools f
 | Name | Role | Date | Version |
 |------|------|------|--------|
 | Enping Zhou | Author | 2025-11-19 | 1.0 |
-| Felix Liang | Reviewer | (To be filled) | 1.1 |
-| Felix Liang | Approver | (To be filled) | 1.1 |
+| Felix Liang | Reviewer | 2025-11-20 | 1.1 |
+| Felix Liang | Approver | 2025-11-20 | 1.1 |
 
 ---
 
