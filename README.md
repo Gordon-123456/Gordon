@@ -140,6 +140,7 @@ This helps if you need to rebuild or troubleshoot later.
 ---
 
 ## Revision History
-| Version | Date       | Note          |
-|---------|------------|---------------|
-| 1.0     | 2025-11-19 | First version |
+| Version | Date       | Changes Made By |
+|---------|------------|-----------------|
+| 1.0     | 2025-11-19 | Enping Zhou |
+| 1.1     | 2025-11-20 | Felix Liang |
