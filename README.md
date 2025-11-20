@@ -128,15 +128,6 @@ python3 --version
 ```
 If versions show, installation is OK.
 
-### Step 7: Record Information
-For future testing, write down:
-- VM name
-- IP address
-- Login username
-- Installed tools
-- Any special settings
-This helps if you need to rebuild or troubleshoot later.
-
 ---
 
 ## Revision History
