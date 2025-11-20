@@ -28,6 +28,16 @@ It includes how to create the VM, install Ubuntu, and install some basic tools f
 
 ---
 
+## Approval Table
+
+| Name | Role | Date | Notes |
+|------|------|------|--------|
+| Enping Zhou | Author | 2025-11-19 | Created the SOP |
+| Instructor | Reviewer | (To be filled) | Reviewed the SOP |
+| Instructor | Approver | (To be filled) | Approved the SOP |
+
+---
+
 ## Definitions
 - VM: virtual machine
 - ISO: installation image
