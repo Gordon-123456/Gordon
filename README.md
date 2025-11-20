@@ -30,11 +30,11 @@ It includes how to create the VM, install Ubuntu, and install some basic tools f
 
 ## Approval Table
 
-| Name | Role | Date | Notes |
+| Name | Role | Date | Version |
 |------|------|------|--------|
-| Enping Zhou | Author | 2025-11-19 | Created the SOP |
-| Instructor | Reviewer | (To be filled) | Reviewed the SOP |
-| Instructor | Approver | (To be filled) | Approved the SOP |
+| Enping Zhou | Author | 2025-11-19 | 1.0 |
+| Felix Liang | Reviewer | (To be filled) | 1.1 |
+| Felix Liang | Approver | (To be filled) | 1.1 |
 
 ---
 
