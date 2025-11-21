@@ -1,82 +1,99 @@
-# Request for Proposal (RFP) – Wireless Network Deployment
+# Home Network Documentation
 
-## 1. Introduction
-This RFP is for selecting a vendor to help our office build a stable and secure wireless network. Our current Wi-Fi has weak-signal areas and sometimes disconnects, so we want a better system. The new wireless network should support modern standards, stronger security, and enough capacity for daily office use.
+## 1. Physical Topology
 
----
+My home network is very simple because I live in a student shared house. We only have one Bell Wi-Fi router, and it is placed in the living room. All devices connect through Wi-Fi.
 
-## 2. Project Scope
-### 2.1 Site Survey
-Vendor should check the office environment and decide the best access point placement. A simple map or explanation is fine. Please also note if there are any interference issues.
+```
+ [Living Room]
+      |
+   Bell Router
+      |
+------------------------------------------------
+|              |              |               |
+My Room    Roommate A     Roommate B      Kitchen
+ Laptop       Phones         Laptop        Smart TV
+ Phone
+```
 
-### 2.2 Installation and Configuration
-Install Wi-Fi 6 access points and configure SSID, password, WPA3, and basic network settings. After installation, vendor needs to test the coverage.
-
-### 2.3 Integration with Existing Network
-Make sure access points connect correctly to our switches. If more PoE or cables are needed, please tell us. Provide simple explanation for our small IT team.
-
-### 2.4 Ongoing Support
-Vendor should provide basic maintenance, troubleshooting support, and firmware update help.
-
----
-
-## 3. Requirements
-### 3.1 Wireless Coverage
-Wi-Fi should cover the whole office, including meeting rooms and open spaces. No large dead zones.
-
-### 3.2 Standards
-System must support Wi-Fi 6. Wi-Fi 6E can be mentioned if available.
-
-### 3.3 Security
-- WPA3 encryption
-- MAC filtering
-- Guest Wi-Fi separated from main network
-
-### 3.4 Capacity
-Should support around 100–150 devices simultaneously.
-
-### 3.5 Monitoring
-Vendor should provide a simple dashboard or management page to check connected users and device status.
+Around 20 devices in total because each student has multiple devices.
 
 ---
 
-## 4. Additional Components
-- Recommend AP models and quantities
-- Provide a small network diagram
-- Short user guide for managing Wi-Fi
-- Suggestions for future upgrade
+## 2. Logical Topology
+
+All devices are in the same subnet: 192.168.0.0/24.
+The router provides DHCP and assigns IP addresses automatically.
+
+```
+          Bell Router (192.168.0.1)
+                   |
+      -------------------------------------
+      Phones / Laptops / iPad (~20 devices)
+```
+
+No VLANs or extra segmentation.
 
 ---
 
-## 5. Vendor Qualifications
-- At least 2 years experience, or describe two situations where you previously set up a network
-- List certifications (optional)
-- Provide 3 references (even small projects are fine)
+## 3. Addressing
+
+(Information slightly modified for privacy.)
+
+| Device        | IP Address (DHCP) | Notes          |
+| ------------- | ----------------- | -------------- |
+| Router        | 192.168.0.1       | Gateway        |
+| My Laptop     | 192.168.0.25      | Auto assigned  |
+| My Phone      | 192.168.0.41      | Auto assigned  |
+| Other Devices | 192.168.0.50–150  | Roommates' IPs |
+
+* Subnet Mask: 255.255.255.0
+* DHCP Range: 192.168.0.10–200
 
 ---
 
-## 6. Evaluation Criteria
-- Cost: hardware + installation + yearly support
-- Technical Approach: short explanation of how the vendor will complete tasks
-- Timeline: expected days for survey, installation, and testing
-- Reputation: based on references and past work
+## 4. Devices & Services
+
+### Main Device
+
+* Bell Home Hub Router
+
+  * Wi-Fi 2.4G / 5G
+  * DHCP
+  * NAT
+  * Basic firewall
+
+### Other Devices
+
+* Laptops
+* Phones
+* Tablets
+* Smart TV
+  No server or special services in the house.
 
 ---
 
-## 7. Submission
-- Format: Proposals should be submitted in PDF format
-- Deadline: Saturday, Nov 22, 2025 by 11:00 PM
-### Contact Information:  
-- Name: Enping Zhou 
-- Teams/Email: enpingzhou@student.mitt.ca
+## 5. Configurations (Simple Student Level)
+
+### Router Settings
+
+* LAN IP: 192.168.0.1
+* DHCP: Enabled
+* Wi-Fi Security: WPA2
+* Firewall: Default
+* No VLAN
+* No port forwarding
+
+### My Devices
+
+* IP address: automatic
+* DNS: automatic
+
 ---
 
-## 8. Terms and Conditions
-- One-year contract with possible renewal
-- Vendor must keep company information confidential
-- Must follow legal and basic security guidelines
+## 6. Password Storage Method
+
+I save the Wi-Fi password and router login password in my phone Notes app.
+This method is simple but convenient for me.
 
 ---
-
-## 9. Closing
-Thank you for your interest. We hope to work with a vendor who can build a wireless network that is stable, safe, and easy to maintain. We look forward to receiving your proposal.
