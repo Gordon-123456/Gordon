@@ -1,137 +1,82 @@
-# Standard Operating Procedure (SOP)
-## Setup a Virtual Linux Server for Web Application Test
-**Version:** 1.0
-**Date:** 2025-11-19
-**Author:** Enping Zhou
+# Request for Proposal (RFP) – Wireless Network Deployment
+
+## 1. Introduction
+This RFP is for selecting a vendor to help our office build a stable and secure wireless network. Our current Wi-Fi has weak-signal areas and sometimes disconnects, so we want a better system. The new wireless network should support modern standards, stronger security, and enough capacity for daily office use.
 
 ---
 
-## Purpose
-The purpose of this SOP is to show simple steps how I create a Linux virtual machine for basic web application testing.
-Because I am still learning, this SOP is written in an easy way so beginners can also follow.
+## 2. Project Scope
+### 2.1 Site Survey
+Vendor should check the office environment and decide the best access point placement. A simple map or explanation is fine. Please also note if there are any interference issues.
+
+### 2.2 Installation and Configuration
+Install Wi-Fi 6 access points and configure SSID, password, WPA3, and basic network settings. After installation, vendor needs to test the coverage.
+
+### 2.3 Integration with Existing Network
+Make sure access points connect correctly to our switches. If more PoE or cables are needed, please tell us. Provide simple explanation for our small IT team.
+
+### 2.4 Ongoing Support
+Vendor should provide basic maintenance, troubleshooting support, and firmware update help.
 
 ---
 
-## Scope
-This SOP is for students or anyone who needs to set up a small Linux test server on VMware vSphere.
-It includes how to create the VM, install Ubuntu, and install some basic tools for web testing.
+## 3. Requirements
+### 3.1 Wireless Coverage
+Wi-Fi should cover the whole office, including meeting rooms and open spaces. No large dead zones.
+
+### 3.2 Standards
+System must support Wi-Fi 6. Wi-Fi 6E can be mentioned if available.
+
+### 3.3 Security
+- WPA3 encryption
+- MAC filtering
+- Guest Wi-Fi separated from main network
+
+### 3.4 Capacity
+Should support around 100–150 devices simultaneously.
+
+### 3.5 Monitoring
+Vendor should provide a simple dashboard or management page to check connected users and device status.
 
 ---
 
-## Accountability Matrix
-| Task          | Person       |
-|---------------|--------------|
-| Create VM     | Student / Admin |
-| Install OS    | Student      |
-| Install packages | Student    |
-| Documentation | Student      |
+## 4. Additional Components
+- Recommend AP models and quantities
+- Provide a small network diagram
+- Short user guide for managing Wi-Fi
+- Suggestions for future upgrade
 
 ---
 
-## Approval Table
-
-| Name | Role | Date | Version |
-|------|------|------|--------|
-| Enping Zhou | Author | 2025-11-19 | 1.0 |
-| Felix Liang | Reviewer | 2025-11-20 | 1.1 |
-| Felix Liang | Approver | 2025-11-20 | 1.1 |
+## 5. Vendor Qualifications
+- At least 2 years experience, or describe two situations where you previously set up a network
+- List certifications (optional)
+- Provide 3 references (even small projects are fine)
 
 ---
 
-## Definitions
-- VM: virtual machine
-- ISO: installation image
-- vSphere: VMware management web portal
-- SSH: remote login tool for Linux
+## 6. Evaluation Criteria
+- Cost: hardware + installation + yearly support
+- Technical Approach: short explanation of how the vendor will complete tasks
+- Timeline: expected days for survey, installation, and testing
+- Reputation: based on references and past work
 
 ---
 
-## Procedure Steps
-### Step 1: Plan the VM
-Before creating the virtual machine, decide some simple settings:
-- OS: Ubuntu Server 22.04 LTS
-- CPU: 2 vCPUs
-- RAM: 4 GB
-- Disk: 40 GB
-- Network: DHCP is fine
-- Hostname: webtest-ubuntu01
-These settings are enough for a small testing server.
+## 7. Submission
+- Format: Proposals should be submitted in PDF format
+- Deadline: Saturday, Nov 22, 2025 by 11:00 PM
+### Contact Information:  
+- Name: Enping Zhou 
+- Teams/Email: enpingzhou@student.mitt.ca
+---
 
-### Step 2: Create VM in VMware vSphere
-1. Log in to the vSphere web page.
-2. Right-click the ESXi host → New Virtual Machine.
-3. Choose Create a new virtual machine.
-4. Name the VM: linux-webtest-01
-5. Select:
-   - Guest OS: Ubuntu 64-bit
-   - CPU: 2
-   - RAM: 4 GB
-   - Disk: 40 GB
-6. Attach the Ubuntu 22.04 ISO to the virtual CD-ROM.
-7. Click Finish to create the VM.
-
-### Step 3: Install Ubuntu Server
-1. Power on the VM and open console.
-2. Select Install Ubuntu Server.
-3. Use default language and keyboard.
-4. Network: use DHCP or set a simple static IP.
-5. Create your username and password.
-6. Select OpenSSH Server (important for remote access).
-7. Finish installation and reboot.
-
-### Step 4: Basic System Setup
-#### Update system
-```bash
-sudo apt update && sudo apt upgrade -y
-```
-#### Install VMware tools
-```bash
-sudo apt install open-vm-tools -y
-```
-#### Check network
-```bash
-ping -c 3 google.com
-```
-If ping works, the server is online.
-
-### Step 5: Install Tools for Web Testing
-#### Install Apache
-```bash
-sudo apt install apache2 -y
-```
-#### Install Python and Node.js
-```bash
-sudo apt install python3 python3-pip -y
-sudo apt install nodejs npm -y
-```
-#### Install Git
-```bash
-sudo apt install git -y
-```
-
-### Step 6: Test the Server
-#### Test Apache
-```bash
-curl http://localhost
-```
-If you see HTML output, Apache is running.
-
-#### Test SSH
-From another computer:
-```bash
-ssh youruser@server-ip
-```
-#### Check versions
-```bash
-node -v
-python3 --version
-```
-If versions show, installation is OK.
+## 8. Terms and Conditions
+- One-year contract with possible renewal
+- Vendor must keep company information confidential
+- Must follow legal and basic security guidelines
 
 ---
 
-## Revision History
-| Version | Date       | Changes Made By |
-|---------|------------|-----------------|
-| 1.0     | 2025-11-19 | Enping Zhou |
-| 1.1     | 2025-11-20 | Felix Liang |
+## 9. Closing
+Thank you for your interest. We hope to work with a vendor who can build a wireless network that is stable, safe, and easy to maintain. We look forward to receiving your proposal.
